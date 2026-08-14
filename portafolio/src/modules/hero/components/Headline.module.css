@@ -1,0 +1,30 @@
+.wrapper {
+  max-width: 560px;
+}
+
+.eyebrow {
+  font-family: monospace;
+  color: #8B5CF6;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: #F8FAFC;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.role {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: #E9A7FF;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+.tagline {
+  color: #cbc3d8;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+}
