@@ -2,7 +2,7 @@ import styles from './ProfileImage.module.css' // importa los estilos del compon
 
 export const ProfileImage = ({src, alt}) =>{  // crea y exporta el componente ProfileImage y recibe src y alt 
     return(
-        <div className={styles.frame}> // marco
+        <div className={styles.frame}>  
             <img className={styles.image} src={src} alt={alt} />
         </div>                           // src dirrecion imagen alt texto alternativo img
     )
