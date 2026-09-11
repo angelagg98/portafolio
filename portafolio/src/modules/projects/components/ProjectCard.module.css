@@ -1,0 +1,65 @@
+/* .card: el "cuadro" de cada proyecto */
+.card {
+  background: var(--color-surface);           /* superficie ligeramente distinta al fondo */
+  border: 1px solid rgba(139, 92, 246, 0.15);  /* borde morado muy sutil */
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Al pasar el mouse: la tarjeta "flota" un poco y se ilumina, igual que la foto del Hero */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px var(--purple-glow);
+  border-color: var(--purple-400);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: #f8fafc;
+  margin: 0;
+}
+
+.description {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+  flex-grow: 1; /* empuja el link hacia abajo aunque la descripción sea corta */
+}
+
+/* .stackList: la fila de tecnologías (JAVA, React, etc.) */
+.stackList {
+  list-style: none;    /* quita los puntos de lista por defecto */
+  display: flex;
+  flex-wrap: wrap;      /* si no caben en una línea, pasan a la siguiente */
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+/* .stackItem: cada "pill" individual con el nombre de la tecnología */
+.stackItem {
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--purple-300);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px; /* redondea completamente los bordes → forma de "pastilla" */
+}
+
+.link {
+  color: var(--purple-300);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--purple-200);
+}

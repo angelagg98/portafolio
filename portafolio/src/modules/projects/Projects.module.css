@@ -1,0 +1,22 @@
+.projects {
+  max-width: 1120px;   /* mismo ancho máximo que el Hero, para que todo se vea alineado */
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  color: #f8fafc;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* .grid: acomoda las tarjetas automáticamente según el ancho disponible.
+   auto-fit + minmax(260px, 1fr) = "cada tarjeta mide al menos 260px,
+   y caben tantas como quepan por fila, repartiendo el espacio sobrante" */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}

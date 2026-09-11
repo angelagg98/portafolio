@@ -5,14 +5,16 @@
 // (donde corren Vercel, Netlify, GitHub Actions, etc.) SÍ distingue, y el build
 // se rompe con un error de "módulo no encontrado". Por eso se corrigió.
 import { Hero } from './modules/hero/Hero.jsx'
+import { Projects } from './modules/projects/Projects.jsx'   // 👈 nuevo import
 import { profile } from './data/profile.js'
+import { projects } from './data/projects.js'                // 👈 nuevo import
 
-// App = el "molde" principal. Por ahora solo pone el Hero, pero aquí es donde
-// más adelante se agregarán otras secciones: <Projects />, <Experience />, <Footer />, etc.
 export const App = () => {
   return (
     <div>
       <Hero profile={profile} />
+      <Projects projects={projects} />
+      {/* Próximamente: <Estudios />, <Footer /> */}
     </div>
   )
 }
