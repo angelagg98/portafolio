@@ -1,30 +1,46 @@
+/* .wrapper: contenedor de todo el bloque de texto (eyebrow + nombre + rol + tagline) */
 .wrapper {
-  max-width: 560px;
+  max-width: 560px; /* evita que el texto se vea demasiado ancho en pantallas grandes */
 }
 
+/* .eyebrow: el textito "//Hola, soy" arriba del nombre */
 .eyebrow {
-  font-family: monospace;
-  color: #8B5CF6;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+  font-family: 'Inter', monospace; /* monospace le da el aire de "código" */
+  color: var(--purple-300);         /* usa la variable morada clara definida en index.css */
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;           /* separa un poco las letras, se ve más elegante en mayúsculas */
+  text-transform: uppercase;        /* fuerza mayúsculas visualmente sin cambiar el texto original */
+  margin-bottom: 0.75rem;
+  opacity: 0.9;                     /* un poco más suave que el blanco puro, para que no compita con el nombre */
 }
 
+/* .name: el nombre completo, es el elemento más grande y llamativo del Hero */
 .name {
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  color: #F8FAFC;
-  line-height: 1.1;
+  font-family: var(--font-heading);      /* Poppins, definida en index.css */
+  font-weight: 600;
+  font-size: clamp(2.1rem, 5vw, 3.4rem); /* clamp = tamaño mínimo, ideal según pantalla, máximo */
+  color: #f8fafc;                        /* blanco casi puro para máximo contraste */
+  line-height: 1.15;
   margin: 0;
+  letter-spacing: -0.01em;               /* junta MUY levemente las letras, look más "premium" */
 }
 
+/* .role: el cargo/profesión, con degradado morado en el texto */
 .role {
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  color: #E9A7FF;
-  font-weight: 400;
-  margin-top: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  font-weight: 500;
+  background: linear-gradient(90deg, var(--purple-300), var(--purple-400)); /* degradado morado */
+  -webkit-background-clip: text; /* recorta el fondo para que solo se vea DENTRO de las letras */
+  background-clip: text;
+  color: transparent;            /* el color de texto normal se oculta para dejar ver el degradado */
+  margin-top: 0.6rem;
 }
 
+/* .tagline: frase corta debajo del rol */
 .tagline {
-  color: #cbc3d8;
-  margin-top: 1rem;
+  color: var(--color-text-muted); /* gris-morado suave, menos protagonismo que el nombre */
+  margin-top: 1.1rem;
   font-size: 1.05rem;
+  max-width: 46ch;                /* "ch" = ancho de un caracter, limita líneas muy largas para que se lea bien */
 }

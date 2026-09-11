@@ -1,16 +1,64 @@
+/* Importa dos fuentes de Google Fonts: Poppins (para títulos) e Inter (para texto normal) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap');
+
+/* :root = variables globales de CSS, disponibles en TODO el proyecto con var(--nombre) */
+:root {
+  /* Colores de fondo, de más oscuro a menos oscuro */
+  --color-bg: #10141a;
+  --color-bg-soft: #161320;
+  --color-surface: #1a1626;
+
+  /* Colores de texto */
+  --color-text: #e8edf2;
+  --color-text-muted: #b8b3c7;
+
+  /* Paleta morada, de más oscuro (900) a más claro (200) */
+  --purple-900: #2e1065;
+  --purple-700: #4c1d95;
+  --purple-500: #7c3aed;
+  --purple-400: #8b5cf6;
+  --purple-300: #ad79fc;
+  --purple-200: #cbb6ff;
+  --purple-glow: rgba(139, 92, 246, 0.25); /* versión transparente, para sombras/glow */
+
+  /* Fuentes: una para títulos, otra para texto de párrafo */
+  --font-heading: 'Poppins', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+/* Reset básico: todo elemento incluye su padding/border dentro de su ancho total (más predecible) */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background-color: #10141a;
-  color: #e8edf2;
-  font-family: system-ui, sans-serif;
+
+  /* Fondo compuesto por 2 degradados radiales muy sutiles (arriba-izq y arriba-der) + color base.
+     Esto da profundidad sin ser un color plano, manteniendo el look "elegante" */
+  background:
+    radial-gradient(circle at 15% 0%, rgba(76, 29, 149, 0.25), transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(139, 92, 246, 0.12), transparent 40%),
+    var(--color-bg);
+  background-attachment: fixed; /* el fondo no se mueve al hacer scroll */
+
+  color: var(--color-text);
+  font-family: var(--font-body);
   line-height: 1.6;
 }
 
+/* Todos los títulos usan la fuente de encabezados (Poppins) por defecto */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
+
 img {
-  max-width: 100%;
-  display: block;
+  max-width: 100%; /* ninguna imagen se desborda de su contenedor */
+  display: block;  /* quita el espacio fantasma que dejan las imágenes como elemento "inline" */
+}
+
+/* Cambia el color del texto cuando el usuario lo selecciona (arrastrando el mouse) */
+::selection {
+  background: var(--purple-400);
+  color: #fff;
 }

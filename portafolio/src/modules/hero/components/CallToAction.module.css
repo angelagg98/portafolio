@@ -1,10 +1,32 @@
 .button {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.85rem 1.6rem;
-  background-color: #ad79fc;
-  color: #10141a;
+  display: inline-block;       /* se comporta como bloque pero solo ocupa su propio ancho de texto */
+  margin-top: 1.75rem;
+  padding: 0.9rem 1.8rem;
+
+  /* Fondo con degradado morado en vez de un color plano */
+  background: linear-gradient(90deg, var(--purple-400), var(--purple-300));
+
+  color: #14101f;               /* texto oscuro para que contraste bien contra el morado claro */
+  font-family: var(--font-heading);
   font-weight: 600;
-  text-decoration: none;
-  border-radius: 6px;
+  font-size: 0.95rem;
+  text-decoration: none;        /* quita el subrayado típico de los links */
+  border-radius: 8px;
+
+  box-shadow: 0 4px 18px var(--purple-glow); /* sombra morada suave, glow sutil */
+
+  /* Anima transform, sombra y brillo cuando cambian (hover/active) */
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+/* Al pasar el mouse: sube un poco y el glow crece → sensación de "botón vivo" */
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px var(--purple-glow);
+  filter: brightness(1.05); /* un poco más brillante */
+}
+
+/* Al hacer clic (mientras se mantiene presionado): vuelve a su posición original */
+.button:active {
+  transform: translateY(0);
 }

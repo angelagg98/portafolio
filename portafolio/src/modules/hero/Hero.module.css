@@ -1,27 +1,32 @@
+/* .hero: la sección completa. En mobile el texto y la foto se apilan, en desktop van lado a lado */
 .hero {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column-reverse; /* en mobile: primero la foto, luego el texto (se ve mejor así) */
   align-items: center;
-  gap: 2.5rem;
-  padding: 6rem 1rem 4rem;
-  max-width: 1120px;
-  margin: 0 auto;
+  gap: 2.75rem;                   /* espacio entre foto y texto */
+  padding: 7rem 1.5rem 5rem;      /* aire arriba/abajo y a los lados */
+  max-width: 1120px;              /* ancho máximo del contenido, para no estirarse en pantallas 4K */
+  margin: 0 auto;                 /* centra el bloque horizontalmente */
   text-align: center;
+  min-height: 100vh;              /* ocupa al menos toda la altura de la pantalla al cargar */
+  justify-content: center;        /* centra verticalmente dentro de esa altura */
 }
 
+/* .content: la columna de texto (Headline + botón) */
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* @media = "a partir de 768px de ancho de pantalla, aplica estos estilos" (tablets/desktop) */
 @media (min-width: 768px) {
   .hero {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: row;              /* ahora van lado a lado, no apilados */
+    justify-content: space-between;   /* texto a la izquierda, foto a la derecha */
     text-align: left;
   }
   .content {
-    align-items: flex-start;
+    align-items: flex-start; /* el texto se alinea a la izquierda en vez de centrado */
   }
 }
