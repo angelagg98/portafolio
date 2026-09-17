@@ -1,4 +1,4 @@
-import styles from './ProfileImage.module.css'
+import styles from './Headline.module.css'
 
 export const Headline = ({ name, role, tagline}) => {
     return (

@@ -3,7 +3,7 @@
     height: 160px;
     border-radius: 6px;
     padding: 4px;
-    background: linear-gradiente(135deg,#4C1D95, #8B5CF6, #FFFFFF); /*degradados*/
+    background: linear-gradient(135deg,#4C1D95, #8B5CF6, #FFFFFF); /*degradados*/
 }
 
 .image{

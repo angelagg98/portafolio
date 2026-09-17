@@ -10,7 +10,7 @@ export const Hero = ({ profile }) => {
       <div className={styles.content}>
         <Headline name={profile.name} role={profile.role} tagline={profile.tagline} />
         <CallToAction label="Ver proyectos" href="#projects" />
-        <DownloadButton />                                        
+        <DownloadButton />                                          {/* 👈 línea nueva */}
       </div>
       <ProfileImage src={profile.photoUrl} alt={`Foto de ${profile.name}`} />
     </section>

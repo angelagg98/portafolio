@@ -1,3 +1,10 @@
+:root {
+  --purple-200: #d8b4fe;
+  --purple-300: #c084fc;
+  --purple-400: #a855f7;
+  --font-heading: system-ui, sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }
