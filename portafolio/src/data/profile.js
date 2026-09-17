@@ -2,7 +2,7 @@ import fotoPerfil from '../assets/fotoAMG.jpeg';
 
 export const profile = {
     name: 'Angela Maria Garcia',
-    role: 'Desarrolladora Frontend',
+    role: 'Desarrolladora Frontend y Backend',
     tagline:'construyo interfaces rapidas y faciles de manejar',
     photoUrl:fotoPerfil,
     bio:'Aprendiz de Anális y Desarrollo de Software en el SENA. Me enfoco en arquitectura de componentes, buenas prácticas de React y accesibilidad web. ',
