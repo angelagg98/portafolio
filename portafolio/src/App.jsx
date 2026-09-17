@@ -1,4 +1,4 @@
-import { Hero } from './modules/Hero/Hero.jsx'
+import { Hero } from './modules/hero/Hero.jsx'
 import { profile } from './data/profile.js'
 
 export const App = () => {

@@ -9,7 +9,7 @@ export const profile = {
     skills:['React', 'JavaScript', 'Git', 'Angular'],
     social:[
         { label:'GitHub', url: 'git@github.com:angelagg98/portafolio.git' },
-        { label:'Corre', url: 'mailto: angela280598@gmail.com'},
+        { label:'Correo', url: 'mailto:angela280598@gmail.com'},
     ]
 
 }

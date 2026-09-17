@@ -6,7 +6,7 @@ export const projects = [
     title: 'iniciacion con java',
     description: 'documento donde se explica funcionalidades de java',
     stack: ['JAVA'],
-    repoUrl: 'git@github.com:angelagg98/Repo_de_carlos.git',
+    repoUrl: 'https://github.com/angelagg98/Repo_de_carlos.git',
 },
 
 {
@@ -14,7 +14,7 @@ export const projects = [
     title: 'pagina',
     description: 'pagina creada con Angular',
     stack:['html', 'css','typeScrip', 'Angular'],
-    repoUrl:'git@github.com:angelagg98/angular-routing.git'
+    repoUrl:'https://github.com/angelagg98/angular-routing.git'
 }
 
 
