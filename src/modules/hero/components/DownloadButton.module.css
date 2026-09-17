@@ -14,7 +14,7 @@
   font-weight: 600;
   font-size: 0.95rem;
   border-radius: 8px;
-  cursor: pointer;                /* muestra la "manito" al pasar el mouse, como un link */
+  cursor: pointer;               /* muestra la "manito" al pasar el mouse, como un link */
 
   transition: background 0.25s ease, transform 0.25s ease, color 0.25s ease;
 }
