@@ -1,0 +1,39 @@
+.section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--purple-300);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #8892a4;
+  margin-bottom: 2rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.link {
+  color: var(--purple-400);
+  font-size: 1.1rem;
+  text-decoration: none;
+  border: 1px solid var(--purple-400);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.link:hover {
+  background: rgba(168, 85, 247, 0.1);
+  color: var(--purple-300);
+}
